@@ -1,0 +1,35 @@
+.invoiceForm {
+    min-width: 39%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 16px;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.productHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fieldRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.formField {
+    width: 49%;
+}
+
+@media print {
+    @page { 
+        margin: 0; 
+    }
+
+    .invoiceForm {
+        display: none;
+    }
+}

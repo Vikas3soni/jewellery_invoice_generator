@@ -1,0 +1,28 @@
+.root {
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.datainput {
+    display: flex;
+}
+
+.option {
+        
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* flex-direction: row; */
+}
+
+@media print {
+    @page { 
+        margin: 0; 
+    }
+
+    .option {
+        display: none;
+    }
+    
+}

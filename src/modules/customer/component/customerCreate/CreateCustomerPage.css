@@ -1,0 +1,39 @@
+button {
+  padding: 10px 40px;
+  background-color: #5c6166;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.invoiceForm {
+  min-width: 100%;
+  display: center;
+  flex-direction: column; 
+  margin-right: 126px;
+  height: 100vh;
+  
+}
+
+.productHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fieldRow {
+  width: 150%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.formField {
+  width: 100%;
+}

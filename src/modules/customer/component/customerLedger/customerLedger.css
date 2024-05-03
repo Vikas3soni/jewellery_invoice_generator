@@ -1,0 +1,61 @@
+.customer-ledger-container {
+    margin: 50px auto;
+    max-width: 1200px; /* Adjust as needed */
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #fff; /* Light background */
+  }
+  
+  .page-title {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .customer-table {
+    width: 120%; /* Ensure full width */
+    border-collapse: collapse; /* Remove table borders */
+  }
+  
+  .customer-table th,
+  .customer-table td {
+    padding: 5px;
+    border: 1px solid #ddd; /* Light gray border */
+    text-align: left;
+  }
+  
+  .customer-table thead th {
+    padding: 5px;
+    background-color: #f2f2f2; /* Light gray header */
+    font-weight: bold;
+  }
+  
+  /* Style for the expand/collapse button */
+  .customer-table .MuiIconButton-root {
+    padding: 0; /* Remove default padding */
+  }
+  
+  .invoice-history-container {
+    padding: 1rem; /* Padding for invoice details */
+  }
+  
+  /* Style for the invoice table (optional) */
+  .invoice-history-container table {
+    width: 100%; /* Ensure full width */
+    border-collapse: collapse; /* Remove table borders */
+  }
+  
+  .invoice-history-container th,
+  .invoice-history-container td {
+    padding: 5px;
+    border: 1px solid #ddd; /* Light gray border */
+    text-align: left;
+  }
+  
+  .invoice-history-container thead th {
+    background-color: #f2f2f2; /* Light gray header */
+    font-weight: bold;
+  }
+  
+  
+  

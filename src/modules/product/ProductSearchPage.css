@@ -1,0 +1,83 @@
+/* Product List Container */
+.product-list-container {
+  max-width: 1200px; /* Increased width for desktop */
+  margin: auto;
+  padding: 20px;
+}
+
+/* Search Container */
+.search-container {
+  margin-bottom: 20px;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align search input vertically */
+}
+
+.search-container input {
+  flex: 1; /* Expand input to fill available space */
+  padding: 8px;
+  font-size: 16px;
+}
+
+/* General Styles */
+.container {
+  max-width: 1200px; /* Increased width for desktop */
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input Styles (Optional - Commented out) */
+/* input[type="text"],
+select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+} */
+
+/* Product Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 12px; /* Increased padding for better readability */
+  text-align: left;
+}
+
+table th {
+  background-color: #eee;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Add Product Button */
+.add-product-create-button-container {
+  position: absolute; /* Positioned absolutely for better placement */
+  top: 20px; /* Adjust top position as needed */
+  right: 20px; /* Adjust right position as needed */
+}
+
+.add-product-create-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Smooth color transition on hover */
+}
+
+.add-product-create-button:hover {
+  background-color: hwb(211 44% 42%); /* Updated hover color */
+}

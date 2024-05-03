@@ -1,0 +1,74 @@
+.colHeader {
+    font-size: 12px !important;
+    margin-right: 8px !important;
+    font-weight: 700;
+    color: rgb(14, 13, 13);
+}
+
+
+.tableContainer {
+    width: 100%;
+}
+
+@media print {
+    .colHeader {
+        color: rgb(20, 18, 18);
+        font-size: 12px !important;
+    }
+    .summaryAndPayment {
+      color: rgb(20, 18, 18);
+        font-size: 12px !important;
+
+    }
+}
+
+
+.termsAndConditions {
+    position: absolute; /* Set position to absolute */
+    bottom: 0; /* Position at the bottom */
+    width: 48%; /* Occupy full width */
+    padding: 5px; /* Adjust padding as needed */
+    background-color: #f0f0f0;
+    }
+
+.withBorder > td {
+    border-bottom: 1px solid black;
+    }
+
+
+ 
+.summaryAndPayment {
+
+    margin-top: 140px; /* Adjust spacing as needed */
+    /* border: 1px solid #ddd;  */
+    color: rgb(14, 13, 13); 
+    border-radius: 4px; /* Optional rounded corners */
+    padding: 12px; /* Add some padding */
+  }
+  
+.summaryAndPayment table {
+  
+  float: right;
+  width: 40%; /* Ensure table fills the container */
+  border-collapse: collapse; /* Remove table borders */
+  
+}
+
+.base {
+  border: 1px solid #eee;
+}
+
+.summaryAndPayment th,
+.summaryAndPayment td {
+  padding: 10px; /* Padding for table cells */
+  border: 1px solid #eee; /* Optional cell borders */
+  text-align: right;
+  color: rgb(14, 13, 13);
+  font-size: 12px; 
+  font-weight: bold;
+}
+
+
+.summaryAndPayment tr:nth-child(even) {
+  background-color: #f2f2f2; /* Optional background color for even rows */
+}   

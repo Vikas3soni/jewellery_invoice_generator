@@ -1,0 +1,21 @@
+www.sunarms.co.in {
+    redir https://sunarms.co.in{uri}
+}
+
+#root /home/vsjewelsolution/jeweller-app/build
+
+sunarms.co.in {
+    reverse_proxy localhost:8080
+}
+
+
+#reverse_proxy /api {
+#   reverse_proxy https://localhost:8000 
+   #tls vikassonisvnit@gmail.com
+#}
+
+#root /public
+
+#app.sunarms.co.in {
+#   reverse_proxy localhost:8000
+#}

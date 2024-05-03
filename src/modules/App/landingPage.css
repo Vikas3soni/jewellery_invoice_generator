@@ -1,0 +1,114 @@
+/* landingPage.css */
+.landing-container {
+    display: flex;
+    position: relative; 
+    height: 100vh;  
+    background-size: cover; /* Cover the entire container with the background image */
+    background-position: center; 
+    /* background-color: rgb(197, 201, 202); */
+  } 
+  .sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .logo {
+    padding: 0px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    padding: 0;
+  }
+
+ 
+  .nav-links li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #555;
+  }
+  
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+  
+  .nav-links li a {
+    display: block;
+    color: #ffff;
+    padding: 8px 16px;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+  .nav-links li a:hover {
+    background-color: #555;
+    color: white;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .main-content h1 {
+    font-size: 32px;
+  }
+  
+  .main-content p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .add-profile-button-container {
+    position: absolute; /* Set position to absolute for button container */
+    top: 20px; /* Adjust top position as needed */
+    right: 20px; /* Adjust right position as needed */
+  }
+  .add-profile-button {
+    padding: 20px 20px;
+    /* background-color: #007bff; */
+    color: rgb(59, 53, 53);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  /* .add-profile-button:hover {
+    background-color: hwb(211 44% 42%);
+  } */
+
+  .profile-icon {
+    font-size: 45px; /* Adjust the size as needed */
+  }
+
+  .widget-icon {
+    font-size: 24px; /* Adjust the size as needed */
+  }
+
+
+  .logout-button {
+    position: absolute;
+    bottom: 40px; /* Adjust this value as needed */
+    left: 55px; /* Adjust this value as needed */
+    padding: 8px 16px;
+    /* background-color: #007bff; */
+
+    display: block;
+    color: #ffff;
+    padding: 8px 16px;
+    font-size: 18px;
+    text-decoration: none;
+
+    color: #fff;
+    cursor: pointer;
+    
+  }
+
+  .invoice-table-container {
+    margin-top: auto;
+    width: 50%;
+    left: 30px;
+    padding: 80px;
+  }
