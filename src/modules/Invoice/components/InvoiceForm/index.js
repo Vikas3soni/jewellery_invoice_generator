@@ -11,13 +11,29 @@ import './InvoiceForm.css';
 
 const bill_type = [
   {
-    value: 'GST',
-    label: 'GST',
+    value: 'GST Bill',
+    label: 'GST Bill',
   },
   {
     value: 'Quotation',
     label: 'Quotation',
   },
+];
+
+const payment_status = [
+  {
+    value: 'Full Payment',
+    label: 'Full Payment',
+  },
+  {
+    value: 'Partial Payment',
+    label: 'Partial Payment',
+  },
+  {
+    value: 'Advance Payment',
+    label: 'Advance Payment',
+  },
+
 ];
 
 const payment_mode = [
@@ -40,6 +56,14 @@ const payment_mode = [
 ];
 
 const purity = [
+  {
+    value: '14K',
+    label: '14K',
+  },
+  {
+    value: '16K',
+    label: '16K'
+  },
   {
     value: '18K',
     label: '18K',
@@ -122,6 +146,12 @@ const InvoiceForm = ({
           label="Include GST"
           {...register(`isGstEnabled`)}
         />
+
+      <FormControlLabel
+          control={<Checkbox checked={isPurityEnabled} onChange={(event) => setIsPurityEnabled(event.target.checked)} />}
+          label="Include Purity"
+          {...register(`isPurityEnabled`)}
+        /> 
       <Typography variant="h6" sx={{ mb: 2 }}>
         Customer Details
       </Typography>
@@ -317,14 +347,10 @@ const InvoiceForm = ({
       >
         Add Product
       </Button>
-      
-
-      <FormControlLabel
-          control={<Checkbox checked={isPurityEnabled} onChange={(event) => setIsPurityEnabled(event.target.checked)} />}
-          label="Include Purity"
-          {...register(`isPurityEnabled`)}
-        />  
-
+       
+      <Typography variant="h6" sx={{ mb: 2 }}>
+        Payment Details
+      </Typography>
       <div>
         <TextField
             id="outlined-select-currency"
@@ -343,6 +369,32 @@ const InvoiceForm = ({
             </MenuItem>
           ))}
         </TextField>
+
+        <TextField
+            id="outlined-select-currency"
+            select
+            label="Payment Status"
+            helperText="Please select Payment Status"
+            onChange={(event) => {
+              register('paymentStatus')
+              setValue("paymentStatus", event.target.value)
+            }}
+          >
+          
+          {payment_status.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+
+        <TextField
+              sx={{ mr: 2, mb: 2 }}
+              fullWidth
+              InputLabelProps={{ shrink : true }}
+              label="Balance Pending"
+              {...register('paymentPending')}
+            />
       </div>
       <Button variant="contained" color="success" type="submit">
         Save Invoice
