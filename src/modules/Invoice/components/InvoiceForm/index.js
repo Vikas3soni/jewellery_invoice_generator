@@ -352,7 +352,7 @@ const InvoiceForm = ({
         Payment Details
       </Typography>
       <div>
-        <TextField
+        <TextField sx={{ mr: 2, mb: 2 }}
             id="outlined-select-currency"
             select
             label="Payment Mode"
