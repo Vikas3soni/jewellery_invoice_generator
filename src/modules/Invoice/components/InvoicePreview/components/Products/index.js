@@ -61,7 +61,7 @@ const ProductDetails = ({ formData, setValue}) => {
             </TableCell>
             )}
             <TableCell classes={{ root: "colHeader"}} align="right">
-              Gold Cost
+              Material Cost
             </TableCell>
             <TableCell classes={{ root: "colHeader"}} align="right">
               Making Charge
