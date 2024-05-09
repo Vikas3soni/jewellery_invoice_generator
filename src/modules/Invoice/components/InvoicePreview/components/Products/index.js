@@ -144,7 +144,7 @@ const ProductDetails = ({ formData, setValue}) => {
             </TableRow>
             <TableRow>
               <TableCell align="right">Final Balance:</TableCell>
-              <TableCell align="right">{paymentPending}</TableCell>
+              <TableCell align="right">{formData?.paymentPending}</TableCell>
             </TableRow>
             
           </TableBody>
