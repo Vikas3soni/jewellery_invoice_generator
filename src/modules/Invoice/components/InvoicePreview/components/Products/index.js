@@ -60,9 +60,9 @@ const ProductDetails = ({ formData, setValue}) => {
               Purity
             </TableCell>
             )}
-            <TableCell classes={{ root: "colHeader"}} align="right">
-              Material Cost
-            </TableCell>
+           // <TableCell classes={{ root: "colHeader"}} align="right">
+           //   Material Cost
+           // </TableCell>
             <TableCell classes={{ root: "colHeader"}} align="right">
               Making Charge
             </TableCell>
@@ -103,7 +103,7 @@ const ProductDetails = ({ formData, setValue}) => {
                   <TableCell align="right">{netWeight?.value}</TableCell>
                   <TableCell align="right">{perGramRate?.value}</TableCell>
                   {formData.isPurityEnabled && (<TableCell align="right">{purity?.value}</TableCell> )}
-                  <TableCell align="right">{productCost?.value}</TableCell>
+                 // <TableCell align="right">{productCost?.value}</TableCell>
                   <TableCell align="right">{makingCharge?.value}</TableCell>
                   <TableCell align="right">{totalCost?.value}</TableCell>
                 </TableRow>
@@ -143,7 +143,7 @@ const ProductDetails = ({ formData, setValue}) => {
               <TableCell align="right">{grandTotal}</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell align="right">Final Balance:</TableCell>
+              <TableCell align="right">Balance Due:</TableCell>
               <TableCell align="right">{formData?.paymentPending}</TableCell>
             </TableRow>
             
