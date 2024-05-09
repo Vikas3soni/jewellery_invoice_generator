@@ -37,7 +37,7 @@ const ProductDetails = ({ formData, setValue}) => {
   }, [subTotal, sgst, cgst, discountValue]);
 
   return (
-    <div className='base'>
+    <div className='base' style={{ display: "flex", flexDirection: "column" }}>
     <TableContainer component={Paper} classes={{ root: 'tableContainer' }}>
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
         <TableHead>
@@ -122,13 +122,13 @@ const ProductDetails = ({ formData, setValue}) => {
               <TableCell align="right">Payment Mode:</TableCell>
               <TableCell align="right">{formData?.paymentMode}</TableCell>
             </TableRow>
-            {formData.billType === 'GST' && (
+            {formData.billType === 'GST Bill' && (
             <TableRow>
               <TableCell align="right">CGST</TableCell>
               <TableCell align="right">{cgst}</TableCell>
             </TableRow>
             )}
-            {formData.billType === 'GST' && (
+            {formData.billType === 'GST Bill' && (
             <TableRow>
               <TableCell align="right">SGST</TableCell>
               <TableCell align="right">{sgst}</TableCell>
@@ -142,6 +142,10 @@ const ProductDetails = ({ formData, setValue}) => {
               <TableCell align="right">Grand Total:</TableCell>
               <TableCell align="right">{grandTotal}</TableCell>
             </TableRow>
+            <TableRow>
+              <TableCell align="right">Final Balance:</TableCell>
+              <TableCell align="right">{paymentPending}</TableCell>
+            </TableRow>
             
           </TableBody>
         </Table>
@@ -149,7 +153,7 @@ const ProductDetails = ({ formData, setValue}) => {
       </div>
   
     <div className="termsAndConditions">
-    <Typography variant="body1" sx={{ minWidth: 650 , mt: 2 }}>
+    <Typography variant="body1" sx={{ minWidth: 750 , mt: 2 }}>
       Terms and Conditions:
     </Typography>
     <Typography variant="body2">
