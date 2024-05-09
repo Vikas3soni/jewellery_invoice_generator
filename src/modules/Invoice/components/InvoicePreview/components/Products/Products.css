@@ -24,10 +24,7 @@
 
 
 .termsAndConditions {
-    position: absolute; /* Set position to absolute */
-    bottom: 0; /* Position at the bottom */
-    width: 48%; /* Occupy full width */
-    padding: 5px; /* Adjust padding as needed */
+    justify-content: flex-end;
     background-color: #f0f0f0;
     }
 

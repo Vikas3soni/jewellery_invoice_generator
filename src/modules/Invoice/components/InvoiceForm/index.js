@@ -370,7 +370,7 @@ const InvoiceForm = ({
           ))}
         </TextField>
 
-        <TextField
+        <TextField sx={{ mr: 2, mb: 2 }}
             id="outlined-select-currency"
             select
             label="Payment Status"
