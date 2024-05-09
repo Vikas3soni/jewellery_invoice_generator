@@ -67,9 +67,10 @@ function InvoiceTable() {
                     </TableCell>
                     <TableCell>{invoice.customer}</TableCell>
                     <TableCell align="right">{invoice.bill_amount}</TableCell>
-                    <TableCell align="right">{Date.parse(invoice.bill_date)}</TableCell>
+                    <TableCell align="right">{invoice.bill_date}</TableCell>
                     <TableCell align="right">{invoice.gst}</TableCell>
                     <TableCell align="right">{invoice.discount}</TableCell>
+		
                   </TableRow>
                 ))}
               </TableBody>

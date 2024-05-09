@@ -110,11 +110,11 @@ const InvoicePreview = ({ formData, customers, returnData, setValue}) => {
       </Typography>
       <Typography variant="h4">{jewelerData.firm_name}</Typography>
       <Typography variant="h6">{jewelerData.address}</Typography>
-      {formData.billType === 'GST' && (
+      {formData.billType === 'GST Bill' && (
           <Typography variant="caption">
             <b>GSTIN:</b> {jewelerData.gst}
           </Typography>)}
-          {formData.billType === 'GST' &&
+          {formData.billType === 'GST Bill' &&
          ( <Typography sx={{ mb: 2 }} variant="caption">
             <b>PAN:</b> {jewelerData.pan}
           </Typography>)
