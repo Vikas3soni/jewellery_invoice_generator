@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef ,useEffect, useState } from 'react';
 import DeleteIcon from '@mui/icons-material/RemoveCircle';
 import IconButton from '@mui/material/IconButton';
 import Select from '@mui/material/Select';
@@ -95,6 +95,9 @@ const InvoiceForm = ({
   const [isGstEnabled, setIsGstEnabled] = useState(false);
   const [isPurityEnabled, setIsPurityEnabled] = useState(false);
   const [extraCustomerDetails, setextraCustomerDetails] = useState(false);
+  const netWeightRef = useRef(null); 
+  const perGramRateRef = useRef(null);
+  const makingChargeRef = useRef(null);
 
   const handleCustomerChange = (event, newCustomer) => {
     console.log(newCustomer,'newCustomer')
@@ -272,22 +275,49 @@ const InvoiceForm = ({
                 label="Total Weight"
                 {...register(`products.${index}.totalWeight.value`)}
               />
-              <TextField
+               <TextField
                 className="formField"
                 shrink
                 label="Net Weight"
                 {...register(`products.${index}.netWeight.value`)}
+                inputRef={netWeightRef} 
+                onChange={(event) => {
+                   const netWeight= event.target.value;
+                   const ratePerGram = perGramRateRef.current.value;
+                   const makingCharge = makingChargeRef.current.value;
+                   if (netWeight && ratePerGram) { 
+                    setValue(`products.${index}.productCost.value`, parseFloat(netWeight) * parseFloat(ratePerGram));
+                  }  
+                  if (netWeight && ratePerGram && makingCharge) { 
+                    setValue(`products.${index}.totalCost.value`, parseFloat(netWeight) * parseFloat(ratePerGram) + parseFloat(makingCharge));
+                  }           
+                   
+                 }}
+                
               />
             </div>
             <div className="fieldRow">
               <TextField
                 className="formField"
+                
                 sx={{ mr: 2, mb: 2 }}
                 shrink
                 label="Rate Per Gram"
                 {...register(`products.${index}.perGramRate.value`)}
+                inputRef={perGramRateRef} 
+                onChange={(event) => {
+                  const ratePerGram = event.target.value;
+                  const netWeight = netWeightRef.current.value;
+                  const makingCharge = makingChargeRef.current.value;
+                  if (netWeight && ratePerGram) { 
+                    setValue(`products.${index}.productCost.value`, parseFloat(netWeight) * parseFloat(ratePerGram));
+                  }
+                  if (netWeight && ratePerGram && makingCharge) { 
+                    setValue(`products.${index}.totalCost.value`, parseFloat(netWeight) * parseFloat(ratePerGram) + parseFloat(makingCharge));
+                  }                
+                  
+                }}
               />
- 
               <TextField className="formField"
                 id="outlined-select-purity"
                 //shrink
@@ -313,23 +343,33 @@ const InvoiceForm = ({
               <TextField
                 className="formField"
                 sx={{ mr: 2, mb: 2 }}
-                shrink
-                label="Gold/Stone cost"
+                InputLabelProps={{ shrink : true }}
+                label="Material Cost"
                 {...register(`products.${index}.productCost.value`)}
               />
-              <TextField
+               <TextField
                 className="formField"
                 shrink
-                label="Making Charge"
+                label="Making Charge Per Gm"             
                 {...register(`products.${index}.makingCharge.value`)}
-              />
+                inputRef={makingChargeRef} 
+                onChange={(event) => {
+                  const makingCharge = event.target.value;
+                  const netWeight = netWeightRef.current.value;
+                  const ratePerGram = perGramRateRef.current.value;
+                  if (netWeight && ratePerGram && makingCharge) { 
+                    setValue(`products.${index}.totalCost.value`, parseFloat(netWeight) * parseFloat(ratePerGram) + parseFloat(makingCharge));
+                  }               
+                  
+                }}
+                />
             </div>
             
             <div>
               <TextField
                 fullWidth
                 sx={{ mb: 2 }}
-                shrink
+                InputLabelProps={{ shrink : true }}
                 label="Total Cost"
                 {...register(`products.${index}.totalCost.value`)}
               />
