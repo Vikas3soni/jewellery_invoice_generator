@@ -429,7 +429,7 @@ const InvoiceForm = ({
         </TextField>
 
         <TextField
-              sx={{ mr: 2, mb: 2 }}
+              sx={{  mb: 2 }}
               fullWidth
               InputLabelProps={{ shrink : true }}
               label="Balance Pending"
