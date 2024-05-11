@@ -215,7 +215,7 @@ const Invoice = () => {
         <div className='option'>
           <button 
           variant="contained" color="success" type="submit" onClick={handlePrint}>Print</button>
-          <button sx={{ mr: 1, mb: 1 }}
+          <button sx={{ mr: 2, mb: 2 }}
           variant="contained" color="success" type="submit" onClick={generatePDF}>Download</button>
           <button onClick={shareOnWhatsApp}>Share/WhatsApp</button>
         </div>

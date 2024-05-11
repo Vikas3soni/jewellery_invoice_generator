@@ -62,7 +62,7 @@ const ProductDetails = ({ formData, setValue}) => {
             )}
          
             <TableCell classes={{ root: "colHeader"}} align="right">
-              Making Charge
+              Making Charge/Gram
             </TableCell>
             <TableCell classes={{ root: "colHeader"}} align="right">
               Total
@@ -151,7 +151,7 @@ const ProductDetails = ({ formData, setValue}) => {
       </div>
   
     <div className="termsAndConditions">
-    <Typography variant="body1" sx={{ minWidth: 750 , mt: 2 }}>
+    <Typography variant="body1" sx={{ minWidth: 650 , mt: 2 }}>
       Terms and Conditions:
     </Typography>
     <Typography variant="body2">

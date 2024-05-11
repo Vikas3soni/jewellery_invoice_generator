@@ -1,9 +1,11 @@
 import React, { useRef ,useEffect, useState } from 'react';
 import DeleteIcon from '@mui/icons-material/RemoveCircle';
 import IconButton from '@mui/material/IconButton';
+import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import Box from '@mui/material/Box';
+import { Link } from 'react-router-dom';
 import { Button, TextField, Typography, FormControlLabel, Checkbox } from '@mui/material';
 import {  Autocomplete, Chip, FormControl, InputLabel} from '@mui/material';
 
@@ -179,6 +181,8 @@ const InvoiceForm = ({
           {customers.map(({id, name}) => <MenuItem value={id}>{name}</MenuItem>)}
           
         </Select>
+
+	<Link to="/customer"> <AddBoxOutlinedIcon className="fieldRow" />Add</Link>
         
         {/* <FormControl sx={{ width: '45%', mr: 2, mb: 2 }}>
       <InputLabel htmlFor="customer-name">Customer Name</InputLabel>
@@ -418,6 +422,9 @@ const InvoiceForm = ({
             onChange={(event) => {
               register('paymentStatus')
               setValue("paymentStatus", event.target.value)
+	      if (event.target.value == 'Full Payment') { 
+                setValue(`paymentPending`, parseFloat(0));
+              } 
             }}
           >
           
