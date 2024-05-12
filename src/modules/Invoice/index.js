@@ -202,7 +202,7 @@ const Invoice = () => {
   return (
     <div id="root" className="root">
       <div>
-        <InvoiceForm
+        <InvoiceForm className='form'
         setValue={setValue}
         customers={customers}
         register={register}
@@ -221,7 +221,7 @@ const Invoice = () => {
         </div>
       </div>
 
-      <div id="invoicePreview">
+      <div id="invoicePreview" className='preview'>
         <InvoicePreview customers={customers} control={control} formData={formData} setValue={setValue}
         returnData={handleReturnedValue}/>
       </div>

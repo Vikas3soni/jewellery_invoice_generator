@@ -12,6 +12,11 @@ import "./Products.css"
 
 // Grand total calculation
 
+function toCamelCase(str) {
+  return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+    return index === 0 ?  word.toUpperCase(): word.toLowerCase() ;
+  });
+}
 
 const ProductDetails = ({ formData, setValue}) => {
   const discountValue = 0;
@@ -35,7 +40,9 @@ const ProductDetails = ({ formData, setValue}) => {
     
     };
   }, [subTotal, sgst, cgst, discountValue]);
-
+  
+  const splitTnc = formData.invoice_tnc?.split(/\r?\n|\r|\*|\-/);
+  
   return (
     <div className='base' style={{ display: "flex", flexDirection: "column" }}>
     <TableContainer component={Paper} classes={{ root: 'tableContainer' }}>
@@ -94,7 +101,7 @@ const ProductDetails = ({ formData, setValue}) => {
               >
                   
                   <TableCell component="th" scope="row">
-                    {productName?.value}
+                    {toCamelCase(productName?.value)}
                   </TableCell>
                   <TableCell align="right">{hsnCode?.value}</TableCell>
                   <TableCell align="right">{totalWeight?.value}</TableCell>
@@ -155,7 +162,12 @@ const ProductDetails = ({ formData, setValue}) => {
       Terms and Conditions:
     </Typography>
     <Typography variant="body2">
-      {formData.invoice_tnc}    
+      {splitTnc?.map((term, index) => (
+          <span key={index}>
+            {term}
+            {index < splitTnc.length - 1 && <br />} {/* Add line breaks between terms except the last */}
+          </span>
+        ))}    
     </Typography>
     </div>  
 </div>

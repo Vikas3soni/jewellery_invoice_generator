@@ -26,3 +26,24 @@
     }
     
 }
+
+@media (max-width: 768px) {
+    .root {
+        flex-direction: column; 
+      }
+
+      .form {
+        width: 100%; 
+        margin-bottom: 20px; 
+        
+      }
+
+      .option {
+        width: 100%; 
+        margin-bottom: 40px; 
+      }
+    
+      .preview {
+        width: 100%; 
+      }
+  }

@@ -129,12 +129,12 @@ function LoginPage() {
 
   return (
     <div className="root">
-      <WelcomePage />
-      
-    <div style={styles.container}>
-      <h1 style={styles.heading}>SunarMs Login</h1>
-      <div style={styles.form}>
-        <button onClick={handleLogin} style={styles.button}>
+      <div>
+      <WelcomePage />     
+      <div className="login-form"> 
+        <h1  className="heading">SunarMs Login</h1>
+        
+        <button onClick={handleLogin} className="button">
           Login
         </button>
         </div>
