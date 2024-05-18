@@ -26,6 +26,7 @@
 .termsAndConditions {
     justify-content: flex-end;
     background-color: #f0f0f0;
+    font-size: 9px !important;
     }
 
 .withBorder > td {
@@ -36,7 +37,7 @@
  
 .summaryAndPayment {
 
-    margin-top: 140px; /* Adjust spacing as needed */
+    margin-top: 70px; /* Adjust spacing as needed */
     /* border: 1px solid #ddd;  */
     color: rgb(14, 13, 13); 
     border-radius: 4px; /* Optional rounded corners */

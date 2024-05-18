@@ -109,7 +109,7 @@ const InvoicePreview = ({ formData, customers, returnData, setValue}) => {
         TAX INVOICE
       </Typography>
       <Typography variant="h4">{jewelerData.firm_name}</Typography>
-      <Typography variant="h6">{jewelerData.address}</Typography>
+      <Typography variant="h7">{jewelerData.address}</Typography>
       {formData.billType === 'GST Bill' && (
           <Typography variant="caption">
             <b>GSTIN:</b> {jewelerData.gst}

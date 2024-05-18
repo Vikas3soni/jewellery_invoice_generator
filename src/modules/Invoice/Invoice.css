@@ -18,11 +18,17 @@
 
 @media print {
     @page { 
-        margin: 0; 
+        margin: 20px; 
     }
 
     .option {
         display: none;
+    }
+
+    .preview {
+        width: 14.8cm !important;  /* A5 width in centimeters */
+        height: 21cm !important;    /* A5 height in centimeters */
+        margin: 10px;
     }
     
 }

@@ -158,10 +158,10 @@ const ProductDetails = ({ formData, setValue}) => {
       </div>
   
     <div className="termsAndConditions">
-    <Typography variant="body1" sx={{ minWidth: 650 , mt: 2 }}>
+    <Typography variant="body2" sx={{ minWidth: 650 , mt: 2 }}>
       Terms and Conditions:
     </Typography>
-    <Typography variant="body2">
+    <Typography variant="body3">
       {splitTnc?.map((term, index) => (
           <span key={index}>
             {term}
