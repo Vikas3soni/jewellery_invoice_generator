@@ -293,7 +293,7 @@ const InvoiceForm = ({
                     setValue(`products.${index}.productCost.value`, parseFloat(netWeight) * parseFloat(ratePerGram));
                   }  
                   if (netWeight && ratePerGram && makingCharge) { 
-                    setValue(`products.${index}.totalCost.value`, parseFloat(netWeight) * parseFloat(ratePerGram) + parseFloat(makingCharge)* parseFloat(netWeight));
+                    setValue(`products.${index}.totalCost.value`,( parseFloat(netWeight) * parseFloat(ratePerGram) + parseFloat(makingCharge)* parseFloat(netWeight)).toFixed(2));
                   }           
                    
                  }}
@@ -317,7 +317,7 @@ const InvoiceForm = ({
                     setValue(`products.${index}.productCost.value`, parseFloat(netWeight) * parseFloat(ratePerGram));
                   }
                   if (netWeight && ratePerGram && makingCharge) { 
-                    setValue(`products.${index}.totalCost.value`, parseFloat(netWeight) * parseFloat(ratePerGram) + parseFloat(makingCharge)* parseFloat(netWeight));
+                    setValue(`products.${index}.totalCost.value`, (parseFloat(netWeight) * parseFloat(ratePerGram) + parseFloat(makingCharge)* parseFloat(netWeight)).toFixed(2));
                   }                
                   
                 }}
@@ -362,7 +362,7 @@ const InvoiceForm = ({
                   const netWeight = netWeightRef.current.value;
                   const ratePerGram = perGramRateRef.current.value;
                   if (netWeight && ratePerGram && makingCharge) { 
-                    setValue(`products.${index}.totalCost.value`, parseFloat(netWeight) * parseFloat(ratePerGram) + parseFloat(makingCharge) * parseFloat(netWeight));
+                    setValue(`products.${index}.totalCost.value`,( parseFloat(netWeight) * parseFloat(ratePerGram) + parseFloat(makingCharge) * parseFloat(netWeight)).toFixed(2));
                   }               
                   
                 }}
