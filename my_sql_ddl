@@ -1,0 +1,95 @@
+
+// Schema , tabble ddl for backend MY SQL db
+SELECT table_name FROM information_schema.tables
+WHERE table_schema = 'sunarms'
+ORDER BY table_name;
+
+create schema sunarms;
+
+CREATE TABLE sunarms.profile (
+  firm_name VARCHAR(255),
+  description TEXT,
+  gst VARCHAR(20),
+  address TEXT,
+  logo_url VARCHAR(255),
+  mobile_number VARCHAR(20),
+  email VARCHAR(255),
+  city VARCHAR(255),
+  email_smtp_pass VARCHAR(255),
+  gst_percentage DECIMAL(5,2),
+  owner VARCHAR(255),
+  jeweller_id varchar,
+  invoice_tnc text,
+  pan varchar(25),
+  id SERIAL 
+  
+);
+
+
+CREATE TABLE sunarms.invoices (
+	jeweller_id varchar,
+    id SERIAL PRIMARY KEY,
+    bill_number VARCHAR(50) NOT NULL,
+    bill_date DATE NOT NULL,
+    customer_name VARCHAR(100),
+    phone VARCHAR(20),
+    address TEXT,
+    customer VARCHAR(100),
+    bill_amount varchar,
+    discount varchar,
+    gst varchar,
+    payment_mode varchar,
+     created_at date DEFAULT CURRENT_date
+);
+
+CREATE TABLE sunarms.invoice_products (
+	jeweller_id varchar,
+	bill_number varchar,
+    id SERIAL PRIMARY KEY,
+    invoice_id varchar,
+    product_name VARCHAR(100),
+    hsn_code VARCHAR(50),
+    total_weight VARCHAR,
+    net_weight VARCHAR,
+    per_gram_rate VARCHAR,
+    purity VARCHAR,
+    product_cost VARCHAR,
+    making_charge VARCHAR,
+    cgst VARCHAR,
+    sgst VARCHAR,
+    total_cost VARCHAR,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE sunarms.customers (
+	id SERIAL NOT NULL,
+	mail_address_line_1 varchar(255) NULL,
+	mail_address_line_2 varchar(255) NULL,
+	mail_city varchar(100) NULL,
+	"name" varchar(100) NULL,
+	last_name varchar(100) NULL,
+	phone varchar(20) NULL,
+	email varchar(255) NULL,
+	customer_type varchar(50) NULL,
+	 created_at date DEFAULT CURRENT_date,
+	updated_at date DEFAULT CURRENT_date,
+	jeweller_id varchar NULL
+	
+);
+
+
+CREATE TABLE sunarms.products (
+	product_id SERIAL NOT NULL,
+	product_code varchar(50) NOT NULL,
+	barcode varchar(50) NOT NULL,
+	product_name varchar(255) NOT NULL,
+	product_description text NULL,
+	product_category varchar(100) NULL,
+	product_quantity int4 NULL,
+	product_weight numeric(10, 2) NULL,
+	created_at timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+	updated_at timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+	hsn_number varchar(20) NULL,
+	jeweller_id varchar NULL
+);
