@@ -2,17 +2,13 @@
 
 ## How to use
 
-Download the example [or clone the repo](https://github.com/mui/material-ui):
-
-<!-- #default-branch-switch -->
 
 ```
-For MYSQL DB setup 
+//For MYSQL DB Connections
+//Backend VM Installations
 ——————————————
 connect locally to vm 
 ssh -L 5433:localhost:5555  -— for postgres
-
---SSh tunnel in gcp vm
 ssh -L 5433:localhost:5432 vikas@IP
 
 installation 
@@ -21,11 +17,10 @@ sudo apt install postgresql postgresql-contrib
 
 sudo su - postgres -c psql
 
-psql -h localhost -p 5432 -U admin -d smswebsite //sms
+psql -h localhost -p 5432 -U admin -d smswebsite
 
 CREATE USER admin WITH PASSWORD ‘varsha’;
-create DATABASE smswebsite
-
+create DATABASE smswebsite;
 GRANT ALL PRIVILEGES ON DATABASE smswebsite TO admin;
 
 
@@ -33,25 +28,19 @@ sudo apt update
 sudo apt install unzip
 
 
-sudo apt update
-
+// frontend VM Machine
 
 sudo apt install nodejs npm
 sudo apt install nodejs
 
-
-
+// command to enable https in local mode
 HTTPS=true npm start
 
-postgres status
-
+//postgres status
 sudo systemctl status postgresql
 
 
-full contrl mode 
-
-
-process manager
+//process manager installtion
 sudo apt-get update
 sudo apt-get install supervisor
 
@@ -70,7 +59,7 @@ system ctl status
 sudo systemctl status
 sudo supervisorctl status
 
-location in vm
+// location in vm
 /etc/supervisor
 
 supervise mode
@@ -80,34 +69,30 @@ self certicate
 
 port - 3000 /80
 
-
 /home/vsjewelsolution/jeweller-app
 
 
 sudo ln -s /etc/nginx/sites-available/sunar-webapp.conf /etc/nginx/sites-enabled/sunar-webapp.conf
 
-
 HTTPS=true
 
 sudo supervisorctl stop all
-
 sudo supervisorctl restart all
 
-
+// running the backed application flask app
 gunicorn -w 2 -b 0.0.0.0:8000 --certfile=/Users/vikas/Downloads/sunarms_/certificate.crt --keyfile=/Users/vikas/Downloads/sunarms_/private.key app.main:app
 
-
+// system health
 sudo systemctl stop nginx
-
 sudo netstat -tlpn | grep ':80'
 
-Caddy commands
-
+// Caddy server for https installtion 
 caddy stop
 sudo caddy start
 
 /etc/supervisor/conf.d/
 
+// local mode command for flask app
 gunicorn -w 4 -b 0.0.0.0:8000 --log-level=debug  app.main:app
 
 
@@ -130,10 +115,8 @@ inside the caddy file folder
 
 — restart caddy in fronend vm
 
-
 log files
 /var/log/```
-
 
 
 ## The idea behind the example
