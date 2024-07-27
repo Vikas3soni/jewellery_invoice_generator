@@ -16,19 +16,25 @@
 ![image](https://github.com/user-attachments/assets/65d0ef65-3f2b-4eba-80fc-77c0f939f788)
 
 
+### Configs/ Library and tools
+- connection with gcp vm 
+- https connection via caddy 
+- process manager via supervisor
+- ngnix, gunicorn for backend, frontend app server
+- mysql for backend db
 
 ## How to use
 
 ## For dev env
 ```npm install
-npm run```
+npm run
+```
 
 for backend
 ```python3 main.py```
 
 
-```
-//For MYSQL DB Connections
+```//For MYSQL DB Connections
 //Backend VM Installations
 ——————————————
 connect locally to vm 
