@@ -1,0 +1,27 @@
+2024-07-27 14:32:24,772 - werkzeug - WARNING -  * Debugger is active!
+2024-07-27 14:32:24,790 - werkzeug - INFO -  * Debugger PIN: 397-811-328
+2024-07-27 14:33:08,538 - root - DEBUG - agg_data :: sales data is (0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
+2024-07-27 14:33:08,538 - root - DEBUG - daily_sales vikassonisvnit :: sales data is []
+2024-07-27 14:33:08,540 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2024 14:33:08] "GET /monthly_sales?jeweller_id=vikassonisvnit HTTP/1.1" 200 -
+2024-07-27 14:33:08,540 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2024 14:33:08] "GET /sales_agg_view?jeweller_id=vikassonisvnit HTTP/1.1" 200 -
+2024-07-27 14:33:08,540 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2024 14:33:08] "GET /daily_sales?jeweller_id=vikassonisvnit HTTP/1.1" 200 -
+2024-07-27 14:33:08,563 - root - DEBUG - daily_sales vikassonisvnit :: sales data is []
+2024-07-27 14:33:08,563 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2024 14:33:08] "GET /daily_sales?jeweller_id=vikassonisvnit HTTP/1.1" 200 -
+2024-07-27 14:33:24,555 - root - DEBUG - list_customer:: len of the data 11
+2024-07-27 14:33:24,559 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2024 14:33:24] "GET /list_customers?jeweller_id=vikassonisvnit HTTP/1.1" 200 -
+2024-07-27 14:33:34,734 - root - DEBUG - list_customer:: len of the data 11
+2024-07-27 14:33:34,736 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2024 14:33:34] "GET /list_customers?jeweller_id=vikassonisvnit HTTP/1.1" 200 -
+2024-07-27 14:33:47,197 - root - DEBUG - list_customer:: len of the data 11
+2024-07-27 14:33:47,200 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2024 14:33:47] "GET /list_customers?jeweller_id=vikassonisvnit HTTP/1.1" 200 -
+2024-07-27 14:33:49,280 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2024 14:33:49] "GET /monthly_sales?jeweller_id=vikassonisvnit HTTP/1.1" 200 -
+2024-07-27 14:33:49,281 - root - DEBUG - daily_sales vikassonisvnit :: sales data is []
+2024-07-27 14:33:49,282 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2024 14:33:49] "GET /daily_sales?jeweller_id=vikassonisvnit HTTP/1.1" 200 -
+2024-07-27 14:33:49,290 - root - DEBUG - agg_data :: sales data is (0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
+2024-07-27 14:33:49,292 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2024 14:33:49] "GET /sales_agg_view?jeweller_id=vikassonisvnit HTTP/1.1" 200 -
+2024-07-27 14:33:49,297 - root - DEBUG - daily_sales vikassonisvnit :: sales data is []
+2024-07-27 14:33:49,298 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2024 14:33:49] "GET /daily_sales?jeweller_id=vikassonisvnit HTTP/1.1" 200 -
+2024-07-27 14:33:50,517 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2024 14:33:50] "GET /list-invoices?jeweller_id=vikassonisvnit HTTP/1.1" 200 -
+2024-07-27 14:33:54,284 - root - DEBUG - list_customer:: len of the data 11
+2024-07-27 14:33:54,286 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2024 14:33:54] "GET /list_customers?jeweller_id=vikassonisvnit HTTP/1.1" 200 -
+2024-07-27 14:33:54,288 - root - DEBUG - get_profile_by_id :: profile_data is ('L K Jewellers', 'A family-owned jewelry store offering.', 'ABC1234567890', '123 Main Street, Gandhi path west , Jaipur', 'https://example.com/logo.png', '+91 555-123-4567', 'info@sparingjewels.com', 'Lucknow', 'your_smtp_password', '3', 'Kishor S', 'vikassonisvnit', '1. Any discrepancies or damages must be reported within 24 hours of receipt \n2. Jaipur is the judicial Area \n3. Exchange wont applicable after 6 months', '87789SFLK')
+2024-07-27 14:33:54,290 - werkzeug - INFO - 127.0.0.1 - - [27/Jul/2024 14:33:54] "GET /get_profile_by_id?jeweller_id=vikassonisvnit HTTP/1.1" 200 -

@@ -1,0 +1,6 @@
+flask
+cryptography
+flask-cors
+psycopg2-binary
+flasgger
+gunicorn
