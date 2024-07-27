@@ -1,6 +1,30 @@
 # Jewellery Invoice generator
 
+###Landing page
+![image](https://github.com/user-attachments/assets/892cf1fe-89b1-4c08-a96d-becd05becb69)
+
+### login
+![image](https://github.com/user-attachments/assets/8d808a49-c71d-47bb-b1c8-dd8c662e2269)
+
+### landing page
+![image](https://github.com/user-attachments/assets/63c5b2d5-a130-416f-aa72-968de24d980e)
+
+### customer view and create 
+![image](https://github.com/user-attachments/assets/b2475317-0639-45fb-a19e-68d866b2fb16)
+
+### invoice 
+![image](https://github.com/user-attachments/assets/65d0ef65-3f2b-4eba-80fc-77c0f939f788)
+
+
+
 ## How to use
+
+## For dev env
+```npm install
+npm run```
+
+for backend
+```python3 main.py```
 
 
 ```
